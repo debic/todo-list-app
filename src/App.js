@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import TaskForm from './Components/TaskForm';
+import ListTasks from './Components/ListTasks';
 
 function App() {
+  const [toDoList, setToDoList] = useState([])
+
+  useEffect(()=>{
+    setToDoList(JSON.parse(localStorage.getItem("toDoList")))
+  }, [])
+
+  const addPost = (newPost) => {
+    const arrayWithNewPost = [...toDoList, newPost]
+    setToDoList(arrayWithNewPost)
+    localStorage.setItem("toDoList", JSON.stringify(arrayWithNewPost))
+  }
+
+  const deletePost = (noteId) => {
+    const copiedtodoList = [...toDoList]
+    const deletedIdList = copiedtodoList.filter(note => note.id !== noteId)
+    setToDoList(deletedIdList)
+    localStorage.setItem("toDoList", JSON.stringify(deletedIdList))
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TaskForm addPost={addPost} toDoList={toDoList} setToDoList={setToDoList}/>
+      <ListTasks toDoList={toDoList} setToDoList={setToDoList} deletePost={deletePost}/>
     </div>
   );
 }

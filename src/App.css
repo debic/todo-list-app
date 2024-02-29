@@ -1,38 +1,154 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-weight: 800;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+h2{
+  margin-bottom: 2vw;
+}
+p{
+  margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form{
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContainer{
   display: flex;
   flex-direction: column;
+  background-color: rgb(246, 246, 246);
+  padding-top: 6vw;
+  font-family: 'Roboto', sans-serif;
   align-items: center;
+  min-height: 100vh;
+}
+.modal-content{
+  background-color: white;
+  width: 30vw;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2vw;
+  border-radius: 1vw;
+  margin-top: 5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.label{
+  margin-bottom: 1%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label2{
+  margin-top: 5%;
 }
+
+.mainCTA{
+width: max-content;
+margin-top: 1.5vw !important;
+background-color: #5959E0 !important;
+border: none !important;
+text-decoration: none;
+padding: 10px 32px !important;
+font-size: 1.3rem !important;
+border-radius: 5vw !important;
+font-weight: 600 !important;
+font-family: 'Poppins', sans-serif !important;
+}
+
+.formCTA{
+  margin-top: 5%;
+  margin-right: 5%;
+}
+
+.folders{
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.folder{
+  width: 30vw;
+  background-color: #EDEDED;
+  padding: 2vw;
+  margin: 1vw;
+  border-radius: 0.5vw;
+}
+
+.folderDroppable{
+  background-color: #d2d2d2;
+height: 100%;
+}
+
+.folderNotDroppable{
+height: 100%;
+}
+
+.postContainer{
+  background-color: white;
+  width: 25vw;
+  margin-top: 1vw;
+  padding: 0.8vw;
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+align-items: center;
+border-radius: 0.5vw;
+}
+
+.postContainerInfo{
+  display: flex;
+}
+
+.Urgent{
+  border: 0.2vw solid #FDA491;
+  border-radius: 30px;
+}
+.NotUrgent{
+  border: 0.2vw solid #FDCD81;
+  border-radius: 30px;
+}
+.Bonus{
+  border: 0.2vw solid #5959E0;
+  border-radius: 30px;
+}
+
+.textPost{
+  margin-left: 0.8vw;
+}
+
+.textPostTitle{
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.textPostDate{
+  color:#ADADAD;
+}
+
+.icons{
+  display: flex;
+}
+
+.deleteIcon{
+  width: 2vw;
+}
+
+.editIcon{
+  width: 2vw;
+}
+
+.deleteIcon:hover{
+  cursor: pointer;
+}
+
+.editIcon:hover{
+  cursor: pointer;
+}
+
+
+
